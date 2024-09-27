@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="style.css">
+       <title>CSS Variables</title>
+</head>
+<body>
+       <header id="main-header">
+              <h1>CSS Variables</h1>
+       </header>
+       <div class="container">
+              <div class="grid">
+                     <div class="box">
+                            <h1>Hello World</h1>
+                            <p>
+                                 Just wanted to take a moment to send a warm greeting to everyone out there. Whether you're starting your day, in the
+                                   middle of a busy afternoon, or winding down for the evening, I hope you’re embracing the moments that make life special.
+                            </p>
+                     </div>
+                     <div class="box">
+                            <h1>Hello World</h1>
+                            <p>
+                                   Just wanted to take a moment to send a warm greeting to everyone out there. Whether you're starting your day, in
+                                   the
+                                   middle of a busy afternoon, or winding down for the evening, I hope you’re embracing the moments that make life
+                                   special.
+                            </p>
+                            </div>
+                     </div>
+              </div>
+       </div>
+       <script>
+              const box=document.querySelector('.box');
+              const boxstyles=getComputedStyle(box);
+              const boxMainColor=boxstyles.getpropertyvalue('--box-main-color');
+              const header=document.querySelector('#main-header');
+              header.style.setproperty('--header-bg-color', boxMainColor);
+       </script>
+</body>
+</html>

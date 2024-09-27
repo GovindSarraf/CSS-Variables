@@ -1,0 +1,57 @@
+/* Define var for the root elements */
+:root {
+       --header-bg-color: #333;
+       --header-txt-color: #fff;
+       --main-bg-color: #f4f4f4;
+       --main-txt-color: #333;
+       --container-width: 90%;
+}
+
+body {
+       font-family: Arial, Helvetica, sans-serif;
+       margin: 0;
+       padding: 0;
+       line-height: 1.5;
+       background-color: var(--main-bg-color);
+       color: var(--main-text-color);
+}
+header#main-header{
+       color: var(--header-txt-color);
+       background-color: var(--header-bg-color); 
+}
+header#main-header h1{
+       margin: 0;
+       padding: 0;
+}
+.grid{
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       --gap: 20px;
+       grid-gap: var(--gap) ;  
+       align-items: center;
+}
+.container {
+       width: var(--container-width);
+       margin: 20px auto;
+}
+/* Define box vars */
+.box{
+       --box-bg-color:#ddd;
+       --box-txt-color:rgb(3, 102, 201);
+       --box-padding: 5px 10px;
+       --box-shadow-h-offset:10px;
+       --box-shadow-v-offset:5px;
+       --box-shadow-blur:5px;
+}
+.box{
+       background-color:var(--box-bg-color) ;
+       padding: var(--box-padding );
+       border: 1px solid var(--box-txt-color );
+       box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) var(--box-txt-color);
+}
+.box h1{
+       color: var(--box-txt-color);
+}
+.box p{
+       color: var(--box-txt-color);
+}
